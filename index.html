@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Malangen Lab Activity 4</title>
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f4f7fb;
+      color: #263238;
+    }
+
+    .container {
+      width: min(900px, 92%);
+      margin: 45px auto;
+    }
+
+    .page {
+      background: white;
+      border: 1px solid #dfe5ec;
+      border-radius: 8px;
+      padding: 32px;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.06);
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      color: #1769aa;
+      font-size: 32px;
+    }
+
+    .subtitle {
+      margin: 0;
+      color: #697586;
+      font-size: 15px;
+    }
+
+    .line {
+      height: 2px;
+      background: #2d7dcc;
+      margin: 25px 0;
+    }
+
+    .hero-image {
+      width: 100%;
+      display: block;
+      border-radius: 7px;
+      border: 1px solid #dce3eb;
+      background: #eef5fb;
+    }
+
+    .card {
+      margin-top: 22px;
+      padding: 20px;
+      border: 1px solid #dce3eb;
+      border-radius: 7px;
+      background: #fafcfe;
+    }
+
+    .card h2 {
+      margin: 0 0 14px;
+      font-size: 19px;
+      color: #1769aa;
+    }
+
+    .info-row {
+      margin: 8px 0;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .label {
+      font-weight: bold;
+    }
+
+    .note {
+      margin-top: 22px;
+      padding: 16px 18px;
+      border-left: 4px solid #2d7dcc;
+      background: #f1f7fd;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    footer {
+      text-align: center;
+      color: #7a8694;
+      font-size: 12px;
+      margin-top: 20px;
+    }
+
+    @media (max-width: 600px) {
+      .page { padding: 22px; }
+      h1 { font-size: 26px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <section class="page">
+      <h1>Hello CDN!</h1>
+      <p class="subtitle">A simple static page for observing Content Delivery Network behavior.</p>
+
+      <div class="line"></div>
+
+      <img class="hero-image" src="cortis.jpg" alt="Simple illustration of a CDN connecting users to an origin server">
+
+      <div class="card">
+        <h2>Deployment Information</h2>
+
+        <p class="info-row">
+          <span class="label">Student Name:</span>
+          Rica Mhey A. Malangen
+        </p>
+
+        <p class="info-row">
+          <span class="label">Student ID:</span>
+          2400826
+        </p>
+
+        <p class="info-row">
+          <span class="label">Deployment Time:</span>
+          OCTOBER 5, 2026 — 11:23 AM
+        </p>
+
+        <p class="info-row">
+          <span class="label">Platform:</span>
+          Netlify
+        </p>
+
+        <p class="info-row">
+          <span class="label">Purpose:</span>
+          To observe CDN-related response headers and understand edge caching.
+        </p>
+      </div>
+
+      <div class="note">
+        <strong>What to Check:</strong><br>
+        Open Browser Developer Tools (F12) → Network → refresh → click the HTML request
+        → Headers → Response Headers. Look for fields such as
+        <strong>Server</strong>, <strong>Via</strong>, <strong>X-NF-Request-ID</strong>,
+        <strong>cache-control</strong>, or <strong>age</strong>.
+      </div>
+    </section>
+
+    <footer>Lab Activity 4 — CDN Verification</footer>
+  </main>
+</body>
+</html>
